@@ -12,7 +12,7 @@
           <p> Oops… the page you requested is not exists</p>
         </div>
         <div class="page__error--button">
-          <a href="index.html" target="_self"><button class="contact__support__button--dark ">Home Page</button></a>
+          <router-link to="/"><button class="contact__support__button--dark">Home Page</button></router-link>
         </div>
       </div>
     </section>

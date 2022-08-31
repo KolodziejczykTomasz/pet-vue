@@ -5,8 +5,7 @@
       <div class="nav__brand page__form__close--brand">
         <img class="nav__brand--image" src="../assets/images/logo.svg" /> </div>
       <div class="page__privacy__close--button">
-        <a href="index.html" target="_self"><img src="../assets/images/x.svg"
-        /></a>
+        <router-link to="/"><img src="../assets/images/x.svg" alt="photo name"/></router-link>
       </div>
     </nav>
   </header>

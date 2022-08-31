@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" v-cloak>
     <router-view/>
   </div>
 </template>
@@ -48,26 +48,6 @@ export default {
         this.classList.add('active')
       })
     })
-    let modal = document.getElementById('dashborad_modal')
-    let btnModal = document.getElementById('btnModal')
-    modal.style.display = 'none'
-    btnModal.onclick = function () {
-      if (modal.style.display === 'none') {
-        modal.style.display = 'block'
-      } else {
-        modal.style.display = 'none'
-      }
-    }
-    let cookie = document.getElementById('dashborad_cookie')
-    let btnCookie = document.getElementById('btnCookie')
-    cookie.style.display = 'flex'
-    btnCookie.onclick = function () {
-      if (cookie.style.display === 'none') {
-        cookie.style.display = 'flex'
-      } else {
-        cookie.style.display = 'none'
-      }
-    }
   }
 }
 </script>
@@ -371,6 +351,7 @@ a:hover {
   #menu li {
     padding: 10px 0;
     font-size: 20px;
+    text-align: center;
     font-family: 'RalewaySemiBold';
     width: 220px;
   }

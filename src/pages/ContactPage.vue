@@ -6,7 +6,7 @@
       <div id="nav__brand__form" class="nav__brand page__form__close--brand">
         <img class="nav__brand--image" src="../assets/images/logo.svg" alt="photo name"/> </div>
       <div class="page__form__close--button">
-        <a href="index.html" target="_self"><img src="../assets/images/x.svg" alt="photo name"/></a>
+        <router-link to="/"><img src="../assets/images/x.svg" alt="photo name"/></router-link>
       </div>
     </nav>
   </header>

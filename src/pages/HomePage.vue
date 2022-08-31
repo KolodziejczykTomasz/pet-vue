@@ -5,7 +5,7 @@
       <header>
         <nav class="nav__container">
           <div class="nav__brand">
-            <img class="nav__brand--image" src="../assets/images/logo.svg" />
+            <img class="nav__brand--image" src="../assets/images/logo.svg" alt="logo" />
           </div>
           <div>
             <ul id="menu">
@@ -19,7 +19,8 @@
             <div>en</div>
           </div>
           <div class="burger__wrapper">
-            <button id="burger" class="burger" onclick="this.classList.toggle('active');"></button>
+            <button id="burger" class="burger" :class="{ active }"
+                    @click="active = !active"></button>
           </div>
         </nav>
       </header></div>
@@ -33,21 +34,22 @@
           </div>
           <div class="hero__image">
             <img class="hero__image--bacteries"
-                 src="../assets/images/bakterie 1.svg" />
-            <img class="hero__image--dog" src="../assets/images/pies-1.png" />
+                 src="../assets/images/bakterie 1.svg" alt="logo"/>
+            <img class="hero__image--dog" src="../assets/images/pies-1.png" alt="logo"/>
           </div>
         </div>
         <div class=" ofert__container ">
-          <div class="ofert__element "><img src="../assets/images/dla psow.svg" />
+          <div class="ofert__element "><img src="../assets/images/dla psow.svg" alt="logo"/>
             <p>for</p> dogs
           </div>
-          <div class="ofert__element "><img src="../assets/images/dla kotow.svg" />
+          <div class="ofert__element "><img src="../assets/images/dla kotow.svg" alt="logo"/>
             <p>for </p>cats
           </div>
-          <div class="ofert__element "><img src="../assets/images/dla zajeczakow.svg" />
+          <div class="ofert__element "><img src="../assets/images/dla zajeczakow.svg" alt="logo"/>
             <p>for </p> rabbits
           </div>
-          <div class="ofert__element "><img src="../assets/images/dla gryzoni.svg" />
+          <div class="ofert__element "><img
+            src="../assets/images/dla gryzoni.svg" alt="logo" />
             <p>for</p> rodents
           </div>
         </div>
@@ -66,27 +68,27 @@
             the immune system.
           </div>
           <div class="mission__content--icon">
-            <img src="../assets/images/wskaźnik.svg" />
+            <img src="../assets/images/wskaźnik.svg" alt="logo"/>
           </div>
           <div class="mission__description--quote">
             <img class="mission__description__quote--image"
-                 src="../assets/images/cudzyslow 1.svg" />
+                 src="../assets/images/cudzyslow 1.svg" alt="logo"/>
             <p>We fully understand that the probiotic products we passionately create can significantly reduce
               the amount of antibiotics used in everyday veterinary practice and support you during long-term
               treatment that carries a risk of dysbiosis.</p>
             <img class="mission__description__quote--image"
-                 src="../assets/images/cudzyslow 2.svg" />
+                 src="../assets/images/cudzyslow 2.svg" alt="logo" />
           </div>
         </div>
       </section>
       <section id="product" class="product__container">
         <div class="product__container--background">
           <div class="product__container__hidden__container">
-            <div><img src="../assets/images/napis wygodne saszetki en.svg" /></div>
+            <div><img src="../assets/images/napis wygodne saszetki en.svg" alt="logo"/></div>
             <div class="product__container__hidden__container--text">7x3g</div>
           </div>
           <div class="product__header__image--wrapper">
-            <img class="product__header--image" src="../assets/images/produkt.png" />
+            <img class="product__header--image" src="../assets/images/produkt.png" alt="logo"/>
           </div>
           <div id="section__product--header" class="section__header section__header__product">
             <span class="">02</span>
@@ -106,22 +108,22 @@
             <div class="product__description__image__wrapper">
               <div class="product__description__image__element tooltip">
                 <img class="product__description__image__element--img"
-                     src="../assets/images/nie zawiera substancji konserwujacych.svg" />
+                     src="../assets/images/nie zawiera substancji konserwujacych.svg" alt="logo" />
                 <span class="tooltiptext">It does not contain preservatives</span>
               </div>
               <div class="product__description__image__element tooltip">
                 <img class="product__description__image__element--img"
-                     src="../assets/images/nie zawiera glutenu.svg" />
+                     src="../assets/images/nie zawiera glutenu.svg" alt="logo"/>
                 <span class="tooltiptext">It does not contain gluten</span>
               </div>
               <div class="product__description__image__element tooltip">
                 <img class="product__description__image__element--img"
-                     src="../assets/images/nie zawiera substancji słodzacych.svg" />
+                     src="../assets/images/nie zawiera substancji słodzacych.svg" alt="logo"/>
                 <span class="tooltiptext">It does not contain sweeteners</span>
               </div>
               <div class="product__description__image__element tooltip">
                 <img class="product__description__image__element--img"
-                     src="../assets/images/produkt weganski.svg" />
+                     src="../assets/images/produkt weganski.svg" alt="logo"/>
                 <span class="tooltiptext">Vegan product</span>
               </div>
             </div>
@@ -135,20 +137,20 @@
             <div class="product__list--item">
               <ul>
                 <li>
-                  <div><img src="../assets/images/mark.svg" /></div>
+                  <div><img src="../assets/images/mark.svg" alt="logo"/></div>
                   <div>Improves the qualitative and quantitative composition of the intestinal microbiome.
                   </div>
                 </li>
                 <li>
-                  <div><img src="../assets/images/mark.svg" /></div>
+                  <div><img src="../assets/images/mark.svg" alt="logo"/></div>
                   <div></div>Limits the multiplication of pathogenic bacteria, reduces toxin levels.
                 </li>
                 <li>
-                  <div><img src="../assets/images/mark.svg" /></div>
+                  <div><img src="../assets/images/mark.svg" alt="logo"/></div>
                   <div>Regulates the motility of the digestive tract.</div>
                 </li>
                 <li>
-                  <div><img src="../assets/images/mark.svg" /></div>
+                  <div><img src="../assets/images/mark.svg" alt="logo"/></div>
                   <div>Improves the body's natural immunity.</div>
                 </li>
               </ul>
@@ -160,19 +162,19 @@
               <div class="product__list--item">
                 <ul>
                   <li>
-                    <div><img src="../assets/images/mark.svg" /></div>
+                    <div><img src="../assets/images/mark.svg" alt="logo"/></div>
                     <div>Intestinal dysbiosis.</div>
                   </li>
                   <li>
-                    <div><img src="../assets/images/mark.svg" /></div>
+                    <div><img src="../assets/images/mark.svg" alt="logo"/></div>
                     <div>Chronic inflammation of the intestines IBD, IBS, Colitis.</div>
                   </li>
                   <li>
-                    <div><img src="../assets/images/mark.svg" /></div>
+                    <div><img src="../assets/images/mark.svg" alt="logo"/></div>
                     <div>Malabsorption syndromes.</div>
                   </li>
                   <li>
-                    <div><img src="../assets/images/mark.svg" /></div>
+                    <div><img src="../assets/images/mark.svg" alt="logo"/></div>
                     <div>Mycosis of the digestive system.</div>
                   </li>
                 </ul>
@@ -182,40 +184,40 @@
                 <div id="hidden_text" class="product__list">
                   <ul>
                     <li>
-                      <div><img src="../assets/images/mark.svg" /></div>
+                      <div><img src="../assets/images/mark.svg" alt="logo"/></div>
                       <div>Acute and chronic pancreatitis, and in exocrine pancreatic insufficiency
                         EPI.</div>
                     </li>
                     <li>
-                      <div><img src="../assets/images/mark.svg" /></div>
+                      <div><img src="../assets/images/mark.svg" alt="logo"/></div>
                       <div>Disorders of intestinal microbiota.</div>
                     </li>
                     <li>
-                      <div><img src="../assets/images/mark.svg" /></div>
+                      <div><img src="../assets/images/mark.svg" alt="logo"/></div>
                       <div>Problems with defecation, megacolon in cats.</div>
                     </li>
                     <li>
-                      <div><img src="../assets/images/mark.svg" /></div>
+                      <div><img src="../assets/images/mark.svg" alt="logo"/></div>
                       <div>Diarrhea.</div>
                     </li>
                     <li>
-                      <div><img src="../assets/images/mark.svg" /></div>
+                      <div><img src="../assets/images/mark.svg" alt="logo"/></div>
                       <div>Conditions of increased stress.</div>
                     </li>
                     <li>
-                      <div><img src="../assets/images/mark.svg" /></div>
+                      <div><img src="../assets/images/mark.svg" alt="logo"/></div>
                       <div>Antibiotic therapy.</div>
                     </li>
                     <li>
-                      <div><img src="../assets/images/mark.svg" /></div>
+                      <div><img src="../assets/images/mark.svg" alt="logo"/></div>
                       <div>Decreased immunity supporting the course of atopy.</div>
                     </li>
                     <li>
-                      <div><img src="../assets/images/mark.svg" /></div>
+                      <div><img src="../assets/images/mark.svg" alt="logo"/></div>
                       <div>Unpleasant odor from the mouth.</div>
                     </li>
                     <li>
-                      <div><img src="../assets/images/mark.svg" /></div>
+                      <div><img src="../assets/images/mark.svg" alt="logo"/></div>
                       <div>To enhance regeneration.</div>
                     </li>
                   </ul>
@@ -248,8 +250,11 @@
             </div>
           </div>
           <div class="product__details__modal--wrapper">
-            <div id="btn_modal" class="product__details__icon--plus">
-              <img src="../assets/images/plus tooltip.svg" />
+            <div id="btn_modal" class="product__details__icon--plus"
+                 @click.stop="isOpenModal
+        =!isOpenModal"  >
+              <img src="../assets/images/plus tooltip.svg" alt="logo"
+                  />
             </div>
             <div id="dashborad_modal" class="modal">
               <div class="modal-content">
@@ -293,8 +298,9 @@
       </section>
       <section id="contact" class="contact__container ">
         <div class="contact__description__image">
-          <img class="contact__description__image--bacteries" src="../assets/images/bakterie 3.svg" />
-          <img class="contact__description__image--cat " src="../assets/images/kot.png" />
+          <img class="contact__description__image--bacteries"
+               src="../assets/images/bakterie 3.svg" alt="logo" />
+          <img class="contact__description__image--cat " src="../assets/images/kot.png" alt="logo"/>
         </div>
         <div id="section__contact--header" class="section__header">
           <span>03</span>
@@ -316,11 +322,11 @@
               <div class="contact__orders__contact--list ">
                 <ul>
                   <li>
-                    <div><img src="../assets/images/telefon.svg" /></div>
+                    <div><img src="../assets/images/telefon.svg" alt="logo"/></div>
                     <div><a href="tel:515 739 219">515 739 219</a></div>
                   </li>
                   <li>
-                    <div><img src="../assets/images/mail.svg" /></div>
+                    <div><img src="../assets/images/mail.svg" alt="logo"/></div>
                     <div><a href="mailto:zamowienia@owlie.pl">zamowienia@owlie.pl</a></div>
                   </li>
                 </ul>
@@ -334,11 +340,11 @@
                 <div class="contact__support__contact--list">
                   <ul>
                     <li>
-                      <div><img src="../assets/images/telefon.svg" /></div>
+                      <div><img src="../assets/images/telefon.svg" alt="logo"/></div>
                       <div><a href="tel:786 951 555">786 951 555</a></div>
                     </li>
                     <li>
-                      <div><img src="../assets/images/mail.svg" /></div>
+                      <div><img src="../assets/images/mail.svg" alt="logo"/></div>
                       <div><a href="mailto:petbiom@owlie.pl">petbiom@owlie.pl</a></div>
                     </li>
                   </ul>
@@ -350,11 +356,11 @@
                 <div class="contact__support__contact--list">
                   <ul>
                     <li>
-                      <div><img src="../assets/images/telefon.svg" /></div>
+                      <div><img src="../assets/images/telefon.svg" alt="logo"/></div>
                       <div><a href="tel:797 355 990">797 355 990</a></div>
                     </li>
                     <li>
-                      <div><img src="../assets/images/mail.svg" /></div>
+                      <div><img src="../assets/images/mail.svg" alt="logo"/></div>
                       <div><a href="mailto:dmoch@owlie.pl">dmoch@owlie.pl</a></div>
                     </li>
                   </ul>
@@ -363,26 +369,32 @@
             </div>
           </div>
           <div class="contact__content__wrapper--button">
-            <a href="contact.html" target="_self"><button class="contact__support__button--dark "> Write to us</button></a>
+            <router-link to="/contact" target="_self"><button class="contact__support__button--dark "> Write to us</button></router-link>
           </div>
         </div>
       </section>
     </main>
     <footer class="footer__container ">
-      <div id="dashborad_cookie" class="cookies__container">
+      <div id="dashborad_cookie" v-show="isModalVisible" class="cookies__container">
         <div class="cookies__container--text">This website uses cookies to provide services at the highest level. By
           continuing to use the site, you agree to their use.</div>
-        <div class="cookies__container--button"><button id="btn_cookie">ok</button></div>
+        <div class="cookies__container--button" @click.stop="isModalVisible
+        =!isModalVisible" ><button
+          id="btn_cookie" >ok
+        </button></div>
       </div>
-      <div class="footer__policy"><a href="privacy.html" target="_self">
-        privacy policy
-      </a></div>
+      <div class="footer__policy"><router-link to="/privacy">privacy policy</router-link></div>
       <div class="footer__copyright">&copy;2022 Pet Biom / realization <a href="https://www.solveit.pl/" target="_blank">solveit.pl</a> </div>
     </footer>
   </div>
 </template>
 <script>
 export default {
-  name: 'HomePage'
-}
+  name: 'HomePage',
+  data () {
+    return {
+      isOpenModal: false,
+      isModalVisible: true
+    }
+  }}
 </script>
