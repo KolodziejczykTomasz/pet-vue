@@ -7,7 +7,6 @@
     <Product/>
     <Contact/>
     <Footer/>
-
   </div>
 </template>
 <script>
@@ -25,11 +24,5 @@ export default {
     Product,
     Contact,
     Footer
-  },
-  data () {
-    return {
-      isOpenModal: false,
-      isModalVisible: true
-    }
   }}
 </script>

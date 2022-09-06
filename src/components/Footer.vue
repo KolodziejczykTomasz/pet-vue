@@ -14,6 +14,14 @@
 </template>
 <script>
 export default {
-  name: 'Footer'
+  components: {
+    name: 'Footer'
+  },
+  data () {
+    return {
+      isOpenModal: false,
+      isModalVisible: true
+    }
+  }
 }
 </script>

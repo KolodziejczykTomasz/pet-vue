@@ -169,12 +169,11 @@
           </div>
           <div class="product__details__modal--wrapper">
             <div id="btn_modal" class="product__details__icon--plus"
-                 @click.stop="isOpenModal
-        =!isOpenModal"  >
+                @click='closing()' >
               <img src="../assets/images/plus tooltip.svg" alt="logo"
                   />
             </div>
-            <div id="dashborad_modal" class="modal">
+            <div id="dashborad_modal" class="modal" :style="show ? modalShow : null">
               <div class="modal-content">
                 <p>Feed materials 13.3.1 Starch (bulking agent), 12.1.8. Product produced by Lactobacillus
                   species, rich in tok, 07379-PL Product produced by species of Bifidobacterium, rich in
@@ -217,6 +216,18 @@
 </template>
 <script>
 export default {
-  name: 'Product'
+  name: 'Product',
+  data () {
+    return {
+      show: false,
+      modalShow: {
+        display: 'block'
+      }
+    }
+  },
+  methods: {
+    closing () {
+      this.show = !this.show
+    }}
 }
 </script>
