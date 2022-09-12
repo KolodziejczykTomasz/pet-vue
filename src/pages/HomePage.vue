@@ -1,4 +1,5 @@
 <template>
+  <body id="main-body">
   <div id="HomePage">
     <router-view/>
     <Header/>
@@ -8,6 +9,7 @@
     <Contact/>
     <Footer/>
   </div>
+  </body>
 </template>
 <script>
 import Header from '../components/Header'
