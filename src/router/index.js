@@ -13,5 +13,14 @@ export default new Router({
     { path: '/404', name: 'ErrorPage', component: ErrorPage },
     { path: '/privacy', name: 'Privacy', component: PrivacyPage },
     { path: '/contact', name: 'Contact', component: ContactPage }
-  ]
+  ],
+  scrollBehavior (to, from, savedPosition) {
+    if (to.hash) {
+      return { selector: to.hash }
+    } else if (savedPosition) {
+      return savedPosition
+    } else {
+      return { x: 0, y: 0 }
+    }
+  }
 })

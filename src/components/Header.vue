@@ -4,11 +4,11 @@
         <div class="nav__brand">
           <img class="nav__brand--image" src="../assets/images/logo.svg" alt="logo" />
         </div>
-        <div>
-          <ul id="menu">
-            <li><a v-smooth-scroll class="nav-item" href="#mission" :class="isActive ? active : null"  >Mission</a></li>
-            <li><a v-smooth-scroll class="nav-item" href="#product" :class="isActive ? active : null" >About the product</a></li>
-            <li><a v-smooth-scroll class="nav-item" href="#contact" :class="isActive ? active : null" >Contact</a></li>
+        <div class="menu-container">
+          <ul id="menu" :style="showMenu ? styleMenu : null">
+            <li><router-link class="nav-item" to="#mission">Mission</router-link></li>
+            <li><router-link class="nav-item" to="#product">About the product</router-link></li>
+            <li><router-link class="nav-item" to="#contact">Contact</router-link></li>
           </ul>
         </div>
         <div class="nav__switch__language">
@@ -16,8 +16,7 @@
           <div>en</div>
         </div>
         <div class="burger__wrapper">
-          <button id="burger" class="burger" :class="{ active }"
-                  @click="active = !active"></button>
+          <button id="burger" class="burger" @click='closing()'></button>
         </div>
       </nav>
   </header>
@@ -26,6 +25,19 @@
 <script>
 
 export default {
-  name: 'Header'
+  name: 'Header',
+  data () {
+    return {
+      showMenu: false,
+      styleMenu: {
+        opacity: 1,
+        transition: 'opacity 0.5s ease-out'
+      }
+    }
+  },
+  methods: {
+    closing () {
+      this.showMenu = !this.showMenu
+    }}
 }
 </script>

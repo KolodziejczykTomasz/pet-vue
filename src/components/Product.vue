@@ -221,13 +221,30 @@ export default {
     return {
       show: false,
       modalShow: {
-        display: 'block'
+        display: 'block',
+        transition: 'opacity 0.5s ease-out'
       }
     }
   },
   methods: {
     closing () {
       this.show = !this.show
-    }}
+    }},
+  mounted () {
+    const div = document.getElementById('hidden_text')
+    div.style.display = 'none'
+    document.getElementById('more').innerHTML = '+ more'
+    document.getElementById('more').style.marginLeft = '0'
+    document.getElementById('more').onclick = function () {
+      if (div.style.display === 'none') {
+        div.style.display = 'block'
+        document.getElementById('more').style.marginLeft = '0'
+        this.innerHTML = '- less'
+      } else {
+        div.style.display = 'none'
+        this.innerHTML = '+ more'
+      }
+    }
+  }
 }
 </script>
