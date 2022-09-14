@@ -6,9 +6,9 @@
         </div>
         <div>
           <ul id="menu">
-            <li><a class="nav-item" href="#mission">Mission</a></li>
-            <li><a class="nav-item" href="#product">About the product</a></li>
-            <li><a class="nav-item" href="#contact">Contact</a></li>
+            <li><a v-smooth-scroll class="nav-item" href="#mission" :class="isActive ? active : null"  >Mission</a></li>
+            <li><a v-smooth-scroll class="nav-item" href="#product" :class="isActive ? active : null" >About the product</a></li>
+            <li><a v-smooth-scroll class="nav-item" href="#contact" :class="isActive ? active : null" >Contact</a></li>
           </ul>
         </div>
         <div class="nav__switch__language">

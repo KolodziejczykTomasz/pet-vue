@@ -2,18 +2,13 @@
   <body id="main-body">
   <div id="HomePage">
     <router-view/>
-    <Header/>
-    <Ofert/>
-    <Mission/>
-    <Product/>
-    <Contact/>
-    <Footer/>
+    <component v-for="component in componentList" v-bind:is="component" :key="component"></component>
   </div>
   </body>
 </template>
 <script>
 import Header from '../components/Header'
-import Ofert from '../components/Ofert'
+import Service from '../components/Service'
 import Mission from '../components/Mission'
 import Product from '../components/Product'
 import Contact from '../components/Contact'
@@ -21,10 +16,16 @@ import Footer from '../components/Footer'
 export default {
   components: {
     Header,
-    Ofert,
+    Service,
     Mission,
     Product,
     Contact,
     Footer
-  }}
+  },
+  data () {
+    return {
+      componentList: [Header, Service, Mission, Product, Contact, Footer]
+    }
+  }
+}
 </script>

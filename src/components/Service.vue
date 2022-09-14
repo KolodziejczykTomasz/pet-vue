@@ -1,5 +1,5 @@
 <template>
-  <section id="ofert">
+  <section id="service">
         <div class="hero__container">
           <div>
             <div class="hero__title ">Probiotic for special tasks</div>
@@ -12,18 +12,17 @@
             <img class="hero__image--dog" src="../assets/images/pies-1.png" alt="logo"/>
           </div>
         </div>
-        <div class=" ofert__container ">
-          <div class="ofert__element "><img src="../assets/images/dla psow.svg" alt="logo"/>
+        <div class=" service__container ">
+          <div class="service__element "><img src="../assets/images/dla psow.svg" alt="logo"/>
             <p>for</p> dogs
           </div>
-          <div class="ofert__element "><img src="../assets/images/dla kotow.svg" alt="logo"/>
+          <div class="service__element "><img src="../assets/images/dla kotow.svg" alt="logo"/>
             <p>for </p>cats
           </div>
-          <div class="ofert__element "><img src="../assets/images/dla zajeczakow.svg" alt="logo"/>
+          <div class="service__element "><img src="../assets/images/dla zajeczakow.svg" alt="logo"/>
             <p>for </p> rabbits
           </div>
-          <div class="ofert__element "><img
-            src="../assets/images/dla gryzoni.svg" alt="logo" />
+          <div class="service__element "><img src="../assets/images/dla gryzoni.svg" alt="logo" />
             <p>for</p> rodents
           </div>
         </div>
@@ -31,6 +30,6 @@
 </template>
 <script>
 export default {
-  name: 'Ofert'
+  name: 'Service'
 }
 </script>

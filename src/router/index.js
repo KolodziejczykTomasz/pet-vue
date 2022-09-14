@@ -8,23 +8,10 @@ import ErrorPage from '@/pages/ErrorPage'
 Vue.use(Router)
 
 export default new Router({
-  routes: [{ path: '/',
-    name: 'HomePage',
-    component: HomePage
-  },
-  {
-    path: '/404',
-    name: 'ErrorPage',
-    component: ErrorPage
-  },
-  {
-    path: '/privacy',
-    name: 'privacy',
-    component: PrivacyPage
-  },
-  { path: '/contact',
-    name: 'contact',
-    component: ContactPage
-  }
+  routes: [
+    { path: '/', name: 'HomePage', component: HomePage },
+    { path: '/404', name: 'ErrorPage', component: ErrorPage },
+    { path: '/privacy', name: 'Privacy', component: PrivacyPage },
+    { path: '/contact', name: 'Contact', component: ContactPage }
   ]
 })
