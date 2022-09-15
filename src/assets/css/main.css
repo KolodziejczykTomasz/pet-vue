@@ -2013,6 +2013,16 @@ textarea {
 }
 }
 
+.error-form {   
+    position: absolute;
+    margin-top: -22px;
+    padding-left: 20px;
+    color: #EF2900;
+}
+
+ .messageError{
+    margin-top: -12px;}
+
 .input-slider {
     -webkit-appearance: none;
     -moz-appearance: none;
