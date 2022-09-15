@@ -25,27 +25,27 @@
        <form id="form" class="form" name="contactForm" action="#" method="#">
         <div class="form-group" :class="{ 'has-error': $v.name.$error }">
                     <div class="form__wrapper--input form-control">
-                        <input class="form_input" type="text" id="name" name="name" v-model.lazy="name" @input="$v.name.$touch()"/>
+                        <input class="form_input" type="text" id="name" name="name" v-model="name" @input="$v.name.$touch()"/>
                         <label id="label_name" for="name" class="form__label" > Name </label>
-                        <span class="error-form form-input-hint" v-if="$v.name.$dirty && !$v.name.required">Pole jest wymagane.</span>
-                        <span class="error-form form-input-hint" v-if="$v.name.$dirty && !$v.name.minLength">Wpisz treść o przynajmniej 2 znakach.</span>
+                        <span class="error-form form-input-hint" v-if="$v.name.$dirty && !$v.name.required">Field is required.</span>
+                        <span class="error-form form-input-hint" v-if="$v.name.$dirty && !$v.name.minLength">Enter content with at least 2 characters.</span>
                      </div>
                     <div class="form__wrapper--input form-control">
                         <input class="form_input" type="text" id="lastName" name="lastName" v-model="lastName" @input="$v.lastName.$touch()"/>
                         <label id="label-lastName" for="lastName" class="form__label"  > Last name </label>
-                        <span class="error-form form-input-hint" v-if="$v.lastName.$dirty && !$v.lastName.required">Pole jest wymagane.</span>
-                        <span class="error-form form-input-hint" v-if="$v.lastName.$dirty && !$v.lastName.minLength">Wpisz treść o przynajmniej 2 znakach.</span>
+                        <span class="error-form form-input-hint" v-if="$v.lastName.$dirty && !$v.lastName.required">Field is required.</span>
+                        <span class="error-form form-input-hint" v-if="$v.lastName.$dirty && !$v.lastName.minLength">Enter content with at least 2 characters.</span>
                     </div>
                     <div class="form__wrapper--input form-control">
                         <input class="form_input" type="email" id="email" name="email" v-model="email" @input="$v.email.$touch()"/>
                         <label id="label-email" for="email" class="form__label " > Email </label>
-                        <span class="error-form form-input-hint" v-if="$v.email.$dirty && !$v.email.required">Pole jest wymagane.</span>
-                        <span class="error-form form-input-hint" v-if="$v.email.$dirty && !$v.email.email">Adres email jest niepoprawny.</span>                 </div>
+                        <span class="error-form form-input-hint" v-if="$v.email.$dirty && !$v.email.required">Field is required.</span>
+                        <span class="error-form form-input-hint" v-if="$v.email.$dirty && !$v.email.email">Email address is incorrect.</span>                 </div>
                     <div class="form__wrapper--input form-control">
                         <textarea class="form_input" id="message" name="message" type="text" v-model="message" @input="$v.message.$touch()"></textarea>
                         <label id="label-message" for="message" class="form__label " > Message </label>
-                        <span class="error-form form-input-hint messageError" v-if="$v.message.$dirty && !$v.message.required">Pole jest wymagane.</span>
-                        <span class="error-form form-input-hint messageError" v-if="$v.message.$dirty && !$v.message.minLength">Wpisz treść o przynajmniej 2 znakach.</span>
+                        <span class="error-form form-input-hint messageError" v-if="$v.message.$dirty && !$v.message.required">Field is required.</span>
+                        <span class="error-form form-input-hint messageError" v-if="$v.message.$dirty && !$v.message.minLength">Enter content with at least 2 characters.</span>
                     </div>
                     <div class="page__form__checkbox--wrapper">
                        <input type="checkbox" id="checkbox_id" class="checkbox" v-model="checked"/>
