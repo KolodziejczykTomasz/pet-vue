@@ -24,22 +24,22 @@
         </div>
        <form id="form" class="form" name="contactForm" action="#" method="post">
                     <div class="form__wrapper--input form-control">
-                        <input class="form_input" type="text" id="name" name="name"  value=""  />
+                        <input class="form_input" type="text" id="name" name="name" v-model="name" />
                         <label id="label_name" for="name" class="form__label" > Name </label>
                         <span id="nameError" class="error-form"></span>
                     </div>
                     <div class="form__wrapper--input form-control">
-                        <input class="form_input" type="text" id="lastName" name="lastName" value=""/>
+                        <input class="form_input" type="text" id="lastName" name="lastName" v-model="lastName" />
                         <label id="label-lastName" for="lastName" class="form__label"  > Last name </label>
                         <span id="lastnameError" class="error-form"></span>
                     </div>
                     <div class="form__wrapper--input form-control">
-                        <input class="form_input" type="email" id="email" name="email" value=""/>
+                        <input class="form_input" type="email" id="email" name="email" v-model="email"/>
                         <label id="label-email" for="email" class="form__label " > Email </label>
                         <span id="emailError" class="error-form"></span>
                     </div>
                     <div class="form__wrapper--input form-control">
-                        <textarea class="form_input" id="message" name="message" type="text" value=""></textarea>
+                        <textarea class="form_input" id="message" name="message" type="text" v-model="message"></textarea>
                         <label id="label-message" for="message" class="form__label " > Message </label>
                         <span id="messageError" class="error-form"></span>
                     </div>
@@ -67,11 +67,15 @@
   </div></body>
 </template>
 <script>
-
+import { required, minLength, maxLength } from 'vuelidate/lib/validators'
 export default {
   name: 'ContactPage',
   data () {
     return {
+      name: '',
+      lastName: '',
+      email: '',
+      message: '',
       checked: false,
       slider: 0,
       buttonLight: {
@@ -81,5 +85,27 @@ export default {
         display: 'block'
       }
     }
-  }}
+  },
+  validations: {
+    name: {
+      required,
+      minLength: minLength(4),
+      maxLength: maxLength(15)
+    },
+    lastName: {
+      required,
+      minLength: minLength(4),
+      maxLength: maxLength(30)
+    },
+    email: {
+      required
+    },
+    message: {
+      required,
+      minLength: minLength(10),
+      maxLength: maxLength(500)
+    }
+  }
+
+}
 </script>
